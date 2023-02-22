@@ -10,10 +10,9 @@ source ~/.bashrc_exports
 
 # clone postgres, and checkout appropriate branch
 cd /pgfs/
-git clone https://github.com/postgres/postgres.git
-cd postgres
-git checkout REL_12_STABLE
-#git checkout REL_10_STABLE
+wget https://ftp.postgresql.org/pub/source/v12.5/postgresql-12.5.tar.gz
+tar xzvf postgresql-12.5.tar.gz
+cd postgresql-12.5
 
 sudo apt-get --assume-yes install libreadline-dev zlib1g-dev flex bison-devel \
   zlib-devel openssl-devel wget
