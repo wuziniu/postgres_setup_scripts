@@ -1,0 +1,2 @@
+2023-02-22 20:43:46.151 UTC [27436] FATAL:  lock file "postmaster.pid" already exists
+2023-02-22 20:43:46.151 UTC [27436] HINT:  Is another postmaster (PID 27424) running in data directory "/pgfs/pg_data_dir"?

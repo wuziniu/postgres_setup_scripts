@@ -23,7 +23,7 @@ flex bison libxml2-dev libxslt-dev libssl-dev
 
 # now we can compile postgres (just need to do this first time we're linking
 # with aqo)
-cd /pgfs/postgres
+cd /pgfs/postgresql-12.5
 make -j4 -s
 make install -j4 -s
 
@@ -33,7 +33,7 @@ echo "export PATH=$PG_BUILD_DIR/bin:$PATH" >> ~/.bashrc_exports
 export PATH=$PG_BUILD_DIR/bin:$PATH
 $PG_BUILD_DIR/bin/initdb -D $PG_DATA_DIR
 
-cp ~/postgres_setup_scripts/postgresql.conf $PG_DATA_DIR/
+cp ~/postgres_setup_scripts/balsa-postgresql.conf $PG_DATA_DIR/
 source ~/.bashrc_exports
 
 pg_ctl -D $PG_DATA_DIR -l logfile start
