@@ -38,3 +38,12 @@ source ~/.bashrc_exports
 
 pg_ctl -D $PG_DATA_DIR -l logfile start
 echo "started postgres"
+
+
+# setup pg_hint_plan
+cd ~/
+git clone https://github.com/ossc-db/pg_hint_plan.git -b REL12_1_3_7
+cd pg_hint_plan
+make
+make install
+echo "pg_hint set up"
